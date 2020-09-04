@@ -1,0 +1,128 @@
+@keyframes increaseFront
+{
+    0%
+    {
+        transform: none;
+    }
+
+    100%
+    {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes increaseBack
+{
+    0%
+    {
+        transform: rotateY(180deg);
+    }
+
+    100%
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes decreaseFront
+{
+    0%
+    {
+        transform: rotateY(180deg);
+    }
+
+    100%
+    {
+        transform: none;
+    }
+}
+
+@keyframes decreaseBack
+{
+    0%
+    {
+        transform: rotateY(360deg);
+    }
+
+    100%
+    {
+        transform: rotateY(180deg);
+    }
+}
+
+body
+{
+    align-items: center;
+    background: rgb(0, 72, 144);
+    display: flex;
+    font-family: sans-serif;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    perspective: 500px;
+    perspective-origin: top 50% left 50%;
+    width: 100vw;
+}
+
+.backface, .frontface
+{
+    background: skyblue;
+    position: fixed;
+}
+
+.backface
+{
+    transform: rotateY(180deg);
+}
+
+.button
+{
+    color: gray;
+    cursor: pointer;
+}
+
+.button:not(.disabled):hover
+{
+    color: black;
+    transition: 750ms ease-out;
+}
+
+.counter
+{
+    backface-visibility: hidden;
+    border-radius: 5px;
+    display: flex;
+    height: 25%;
+    width: 40%;
+}
+
+.counter > div
+{
+    align-items: center;
+    font-size: 25pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.counter > .button.less,
+.counter > .button.plus
+{
+    width: 20%;
+}
+
+.counter > .counter_display
+{
+    width: 60%;
+}
+
+.disabled
+{
+    color: gray;
+    cursor: not-allowed;
+}
+
+.frontface
+{
+    z-index: 2;
+}

@@ -1,4 +1,5 @@
-# my_counter_animation
+# Compteur animé
+
 Il s'agit d'un compteur composé de quelques animations.
 
-Téléchargez l'archive, décompressez et ouvrez `index.html`.
+Démo : https://ibrahyma.github.io/my_counter_animation/
